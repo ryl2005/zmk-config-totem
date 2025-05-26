@@ -61,10 +61,10 @@
         Base {
             label = "Base";
             bindings = <
-              &kp W       &kp L       &kp Y         &kp R         &kp B        &kp Z    &kp F        &kp O          &kp U       &kp SEMICOLON
-              &hm LGUI C  &hm LALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M    &hm RSHFT N  &hm RCTRL E    &hm RALT I  &hm RGUI A
-&lt 3 ESCAPE  &kp Q       &kp J       &kp V         &kp D         &kp K        &kp X    &kp H        &kp COMMA      &kp DOT     &kp SLASH      &lt 4 APOSTROPHE
-                                      &mt LGUI DEL  &lt 1 TAB     &kp SPACE    &kp RET  &mo 2        &kp BACKSPACE
+              &kp W       &kp L       &kp Y         &kp P         &kp B        &kp Z    &kp F            &kp O          &kp U       &kp SEMICOLON
+              &hm LGUI C  &hm LALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M    &hm RSHFT N      &hm RCTRL E    &hm RALT I  &hm RGUI A
+&lt 3 ESCAPE  &kp Q       &kp J       &kp V         &kp D         &kp K        &kp X    &kp H            &kp COMMA      &kp DOT     &kp SLASH      &lt 4 APOSTROPHE
+                                      &mt LGUI DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp BACKSPACE
             >;
         };
 
@@ -73,7 +73,7 @@
             bindings = <
               &trans          &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans     &kp INS  &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
               &kp LEFT_SHIFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&kp LEFT_ALT  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans   &trans    &trans          &trans        &kp KP_MULTIPLY  &trans
+&kp LEFT_ALT  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans   &trans    &trans          &trans        &trans     &trans
                                             &trans        &trans        &trans     &trans   &trans    &trans
             >;
         };
