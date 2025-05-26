@@ -49,15 +49,11 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -65,59 +61,59 @@
         Base {
             label = "Base";
             bindings = <
-                   &kp Q       &kp W          &kp E         &kp R      &kp T    &kp Y        &kp U        &kp I       &kp O               &kp P
-              &hm LGUI A  &hm LALT S    &hm LCTRL D  &hm LSHIFT F      &kp G    &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE       &kp Z       &kp X          &kp C         &kp V      &kp B    &kp N        &kp M    &kp COMMA     &kp DOT           &kp SLASH  &lt 4 APOSTROPHE
-                                      &mt LCTRL DEL     &lt 1 TAB  &kp SPACE  &kp RET   &lt 2 BSPC    &kp MINUS
+              &kp W       &kp L       &kp Y         &kp R         &kp B        &kp Z    &kp F        &kp O          &kp U       &kp SEMICOLON
+              &hm LGUI C  &hm LALT R  &hm LCTRL S   &hm LSHIFT F  &kp G        &kp M    &hm RSHFT N  &hm RCTRL E    &hm RALT I  &hm RGUI A
+&lt 3 ESCAPE  &kp Q       &kp J       &kp V         &kp D         &kp K        &kp X    &kp H        &kp COMMA      &kp DOT     &kp SLASH      &lt 4 APOSTROPHE
+                                      &mt LGUI DEL  &lt 1 TAB     &kp SPACE    &kp RET  &mo 2        &kp BACKSPACE
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-                      &trans       &trans  &kp UP_ARROW     &trans  &kp LBRC  &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9         &kp PLUS
-              &kp LEFT_SHIFT     &kp LEFT      &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS
-&kp LEFT_ALT          &trans  &kp PAGE_UP        &trans  &kp PG_DN  &kp LPAR  &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                                 &trans     &trans    &trans    &trans        &trans  &kp NUMBER_0
+              &trans          &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans     &kp INS  &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+              &kp LEFT_SHIFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&kp LEFT_ALT  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans   &trans    &trans          &trans        &kp KP_MULTIPLY  &trans
+                                            &trans        &trans        &trans     &trans   &trans    &trans
             >;
         };
 
         Sym {
             label = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT    &kp DQT
-          &trans  &trans    &trans      &trans       &trans     &trans         &trans           &trans   &trans     &trans
-&trans    &trans  &trans    &trans      &trans       &trans  &kp UNDER      &kp EQUAL           &trans   &trans  &kp SLASH  &kp HOME
-                            &trans      &trans       &trans     &trans         &trans           &trans
+                &kp EXCL       &kp AT    &kp HASH          &kp DOLLAR         &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp KP_ASTERISK  &kp SQT           &kp DQT
+                &kp BACKSLASH  &kp PLUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp LEFT_BRACE   &kp MINUS         &kp SEMICOLON
+&kp LEFT_SHIFT  &trans         &trans    &kp GRAVE         &kp EQUAL          &trans                  &trans                 &kp UNDERSCORE   &kp LESS_THAN    &kp GREATER_THAN  &kp SLASH      &trans
+                                         &trans            &trans             &trans                  &trans                 &trans           &trans
             >;
         };
 
         Fun {
             label = "Fun";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp F1
-        &trans  &trans  &trans  &trans   &to 5  &trans  &trans  &trans  &trans  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F20  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp F1
+        &trans  &trans  &trans  &trans  &to 5     &trans  &trans  &trans  &trans  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp F20  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         Button {
             label = "Button";
             bindings = <
-                    &bt BT_CLR    &trans     &trans      &trans  &bt BT_SEL 0      &trans            &trans      &trans  &bootloader    &trans
-                      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &bt BT_SEL 1      &trans        &kp RSHIFT   &kp RCTRL     &kp RALT  &kp RGUI
-&bootloader  &ext_power EP_TOG    &trans     &trans      &trans  &bt BT_SEL 2      &trans            &trans      &trans       &trans    &trans  &trans
-                                             &trans      &trans        &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT
+             &bt BT_CLR         &trans    &trans     &trans      &bt BT_SEL 0    &trans      &trans            &trans      &bootloader  &trans
+             &kp LGUI           &kp LALT  &kp LCTRL  &kp LSHIFT  &bt BT_SEL 1    &trans      &kp RSHIFT        &kp RCTRL   &kp RALT     &kp RGUI
+&bootloader  &ext_power EP_TOG  &trans    &trans     &trans      &bt BT_SEL 2    &trans      &trans            &trans      &trans       &trans    &trans
+                                          &trans     &trans      &trans          &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT
             >;
         };
 
         Gaming {
             bindings = <
-            &trans  &trans     &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-             &kp A   &kp S      &kp D         &kp F   &mo 6  &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &trans  &trans     &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &kp LCTRL  &kp LEFT_ALT  &trans  &trans  &trans  &trans
+            &kp Q  &kp W  &kp E      &kp R         &kp T        &trans  &trans  &trans  &trans  &trans
+            &kp A  &kp S  &kp D      &kp F         &mo 6        &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp Z  &kp X  &kp C      &kp V         &kp B        &trans  &trans  &trans  &trans  &trans  &trans
+                          &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &trans  &trans  &trans
             >;
 
             label = "Gaming";
@@ -125,10 +121,10 @@
 
         Gaming+ {
             bindings = <
-         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
-                &kp L         &kp O         &kp Y         &kp K         &kp G  &kp F5  &trans  &trans  &trans           &trans
-&kp TAB         &to 0        &trans        &trans  &kp NUMBER_6  &kp NUMBER_7  &trans  &trans  &trans  &trans           &trans  &kp LA(F4)
-                                            &kp J         &kp I         &kp M  &trans  &trans  &trans
+         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
+         &kp L         &kp O         &kp Y         &kp K         &kp G           &kp F5  &trans  &trans  &trans  &trans
+&kp TAB  &to 0         &trans        &trans        &kp NUMBER_6  &kp NUMBER_7    &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
+                                     &kp J         &kp I         &kp M           &trans  &trans  &trans
             >;
 
             label = "Gaming+";
