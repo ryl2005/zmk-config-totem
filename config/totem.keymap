@@ -110,10 +110,10 @@
 
         Gaming {
             bindings = <
-            &kp Q  &kp W  &kp E      &kp R         &kp T        &trans  &trans  &trans  &trans  &trans
-            &kp A  &kp S  &kp D      &kp F         &mo 6        &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp Z  &kp X  &kp C      &kp V         &kp B        &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &trans  &trans  &trans
+            &kp Q  &kp W  &kp E      &kp R         &kp T        &trans  &trans       &trans  &trans  &trans
+            &kp A  &kp S  &kp D      &kp F         &lt 6 G      &trans  &kp LG(TAB)  &trans  &trans  &trans
+&kp ESCAPE  &kp Z  &kp X  &kp C      &kp V         &kp B        &trans  &trans       &trans  &trans  &trans  &trans
+                          &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &trans  &trans       &trans
             >;
 
             label = "Gaming";
@@ -122,8 +122,8 @@
         Gaming+ {
             bindings = <
          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
-         &kp L         &kp O         &kp Y         &kp K         &kp G           &kp F5  &trans  &trans  &trans  &trans
-&kp TAB  &to 0         &trans        &trans        &kp NUMBER_6  &kp NUMBER_7    &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
+         &kp L         &kp O         &kp Y         &kp K         &trans          &kp F5  &trans  &trans  &trans  &trans
+&kp TAB  &to 0         &trans        &kp P         &kp NUMBER_6  &kp NUMBER_7    &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
                                      &kp J         &kp I         &kp M           &trans  &trans  &trans
             >;
 
