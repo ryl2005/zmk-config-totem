@@ -45,11 +45,21 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <10 11 12 13 16 17 18 19>;
+        };
+
+        cw: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE>;
         };
     };
 
@@ -61,20 +71,20 @@
         Base {
             label = "Base";
             bindings = <
-              &kp W       &kp L       &kp Y         &kp P         &kp B        &kp Z    &kp F            &kp O          &kp U       &kp SEMICOLON
-              &hm LGUI C  &hm LALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M    &hm RSHFT N      &hm RCTRL E    &hm RALT I  &hm RGUI A
-&lt 3 ESCAPE  &kp Q       &kp J       &kp V         &kp D         &kp K        &kp X    &kp H            &kp COMMA      &kp DOT     &kp SLASH      &lt 4 APOSTROPHE
-                                      &mt LGUI DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BACKSPACE  &kp BACKSPACE
+              &kp W       &kp L       &kp Y         &kp P         &kp B        &kp Z          &kp F        &kp O        &kp U       &kp SEMICOLON
+              &hm LGUI C  &hm LALT R  &hm LCTRL S   &hm LSHIFT T  &kp G        &kp M          &hm RSHFT N  &hm RCTRL E  &hm RALT I  &hm RGUI A
+&lt 3 ESCAPE  &kp Q       &kp J       &kp V         &kp D         &kp K        &kp X          &kp H        &kp COMMA    &kp DOT     &kp SLASH      &lt 4 APOSTROPHE
+                                      &mt LGUI DEL  &lt 1 TAB     &kp SPACE    &kp BACKSPACE  &to 2        &kp ENTER
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-              &trans          &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans     &kp INS  &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-              &kp LEFT_SHIFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&kp LEFT_ALT  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans   &trans    &trans          &trans        &trans     &trans
-                                            &trans        &trans        &trans     &trans   &trans    &trans
+              &trans          &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans     &kp INS  &kp HOME    &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+              &kp LEFT_SHIFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans   &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&kp LEFT_ALT  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &trans   &caps_word  &trans          &trans        &trans     &trans
+                                            &trans        &trans        &trans     &trans   &trans      &trans
             >;
         };
 
@@ -110,10 +120,10 @@
 
         Gaming {
             bindings = <
-            &kp Q  &kp W  &kp E      &kp R         &kp T        &trans  &trans       &trans  &trans  &trans
-            &kp A  &kp S  &kp D      &kp F         &lt 6 G      &trans  &kp LG(TAB)  &trans  &trans  &trans
-&kp ESCAPE  &kp Z  &kp X  &kp C      &kp V         &kp B        &trans  &trans       &trans  &trans  &trans  &trans
-                          &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &trans  &trans       &trans
+                &kp Q  &kp W  &kp E      &kp R         &kp T        &trans  &trans       &trans  &trans  &trans
+                &kp A  &kp S  &kp D      &kp F         &lt 6 G      &trans  &kp LG(TAB)  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V         &kp B        &trans  &trans       &trans  &trans  &trans  &trans
+                              &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &trans  &trans       &trans
             >;
 
             label = "Gaming";
@@ -121,10 +131,10 @@
 
         Gaming+ {
             bindings = <
-         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5      &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
-         &kp L         &kp O         &kp Y         &kp K         &trans            &kp F5  &trans  &trans  &trans  &trans
-&kp TAB  &to 0         &kp J         &kp P         &kp NUMBER_6  &kp NUMBER_7      &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
-                                     &kp M         &kp I         &kp LEFT_SHIFT    &trans  &trans  &trans
+         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
+         &kp L         &kp O         &kp Y         &kp K         &trans          &kp F5  &trans  &trans  &trans  &trans
+&kp TAB  &to 0         &kp J         &kp P         &kp NUMBER_6  &kp NUMBER_7    &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
+                                     &kp M         &kp I         &kp ESCAPE      &trans  &trans  &trans
             >;
 
             label = "Gaming+";
