@@ -91,7 +91,7 @@
         Sym {
             label = "Sym";
             bindings = <
-                &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS  &kp PIPE         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp UNDERSCORE
+                &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS  &kp BACKSLASH    &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp UNDERSCORE
                 &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL  &kp AMPERSAND    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES
 &kp LEFT_SHIFT  &kp TILDE        &kp PLUS       &kp LBKT          &kp RBKT   &kp PERCENT      &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp APOSTROPHE     &trans
                                                 &trans            &trans     &trans           &trans       &trans                &trans
